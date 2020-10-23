@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block body %}
+
+<section class="banner">
+  <h1>{{ the_title }}</h1>
+  <p>{{ detailed_response }}</p>
+  <br />
+  <p>{{ snippet }}</p>
+  {% if no_input==True %}
+  <a class="form__button form__button--return link" href="/"
+    >{{ button_text }}</a
+  >
+  {% elif no_input==False %}
+  <div class="button__wrapper">
+    <a class="form__button link" href="/">{{ button_text }}</a>
+  </div>
+  {% endif %}
+</section>
+
+{% endblock body %}

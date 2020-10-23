@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block body %}
+
+<section class="banner">
+  <h1>{{ the_title }}</h1>
+  <form method="POST" action="/result" class="form">
+    <label for="snippet">
+      <span class="form__instruction"
+        >Enter a text snippet and we will classify it for&nbsp;you:</span
+      >
+      <textarea
+        class="form__textarea"
+        name="snippet"
+        id="snippet"
+        required
+      ></textarea>
+    </label>
+    <div class="button__wrapper">
+      <button class="form__button" type="submit">Is this spam or ham?</button>
+    </div>
+  </form>
+</section>
+
+{% endblock %}
